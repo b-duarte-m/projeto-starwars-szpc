@@ -66,19 +66,8 @@ body {
     letter-spacing: 3px;
     margin-top: 3px;
 }
-#som {
-    background: #090b1070;
-    border: 1px solid #ffffff35;
-    color: #e3e4e8;
-    font-size: 12px;
-    padding: 10px 16px;
-    border-radius: 30px;
-    cursor: pointer;
-}
-#som[aria-pressed="true"] {
-    border-color: var(--destaque);
-    color: var(--destaque);
-}
+
+
 main {
     max-width: 1440px;
     margin: auto;
@@ -237,15 +226,13 @@ button:focus-visible, a:focus-visible {
     outline: 2px solid var(--destaque);
     outline-offset: 4px;
 }
-footer, #status-som {
+footer {
     color: #969ca9;
     font-size: 10px;
     text-align: center;
     margin-top: 15px;
 }
-#status-som:empty {
-    display: none;
-}
+
 .pular {
     position: fixed;
     top: 10px;
@@ -266,4 +253,8 @@ footer, #status-som {
     to {
         opacity: 1;
     }
+}
+
+.painel {
+    position: relative;
 }
