@@ -1,9 +1,6 @@
 const botoesCarrossel = document.querySelectorAll(".botao");
 const imagens = document.querySelectorAll(".imagem");
 const informacoes = document.querySelectorAll(".informacoes");
-const musica = document.getElementById("musicaFundo");
-const som = document.getElementById("som");
-const statusSom = document.getElementById("status-som");
 let indiceAtual = 0;
 
 function selecionar(indice) {
@@ -35,28 +32,34 @@ document.querySelector(".botoes-carrossel").addEventListener("keydown", evento =
     }
 });
 
-function atualizarSom() {
-    const tocando = !musica.paused;
-    som.setAttribute("aria-pressed", String(tocando));
-    som.textContent = tocando ? "Pausar música" : "Ativar música";
+// Reserva a altura do maior texto para estabilizar os controles.
+const painel = document.querySelector(".painel");
+
+function ajustarAlturaPainel() {
+    let maiorAltura = 0;
+
+    informacoes.forEach(item => {
+        const copia = item.cloneNode(true);
+        copia.hidden = false;
+        copia.classList.add("ativa");
+        copia.setAttribute("aria-hidden", "true");
+        copia.style.cssText = "position:absolute;visibility:hidden;pointer-events:none;display:block;animation:none;width:" + painel.clientWidth + "px;";
+        painel.appendChild(copia);
+        maiorAltura = Math.max(maiorAltura, copia.getBoundingClientRect().height);
+        copia.remove();
+    });
+
+    painel.style.minHeight = Math.ceil(maiorAltura) + "px";
 }
-som.addEventListener("click", async () => {
-    statusSom.textContent = "";
-    som.disabled = true;
-    try {
-        if (musica.paused) {
-            musica.volume = 0.35;
-            await musica.play();
-        } else {
-            musica.pause();
-        }
-    } catch {
-        statusSom.textContent = "Não foi possível tocar a música. Confira o arquivo de áudio.";
-    } finally {
-        atualizarSom();
-        som.disabled = false;
-    }
+
+let quadro;
+window.addEventListener("resize", () => {
+    cancelAnimationFrame(quadro);
+    quadro = requestAnimationFrame(ajustarAlturaPainel);
 });
-musica.addEventListener("play", atualizarSom);
-musica.addEventListener("pause", atualizarSom);
+
 selecionar(0);
+ajustarAlturaPainel();
+if (document.fonts) {
+    document.fonts.ready.then(ajustarAlturaPainel);
+}
