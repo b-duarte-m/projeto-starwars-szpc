@@ -1,103 +1,118 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090b10">
     <title>Universo Star Wars</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0.100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Src/Css/reset.css">
     <link rel="stylesheet" href="Src/Css/estilo.css">
     <link rel="stylesheet" href="Src/Css/responsivo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <audio id="musicaFundo" src="Src/Audio/marchaimperial.mp3" autoplay loop></audio>
 </head>
-
 <body>
-    <main>
-        <div class="carrossel">
-            <img class="imagem ativa" src="Src/Imagens/ep1.png" alt="A Ameaça Fantasma (1999)">
-            <img class="imagem" src="Src/Imagens/ep2.png" alt="Ataque dos Clones (2002)">
-            <img class="imagem" src="Src/Imagens/ep3.png" alt="A Vingança dos Sith (2005)">
-            <img class="imagem" src="Src/Imagens/ep4.png" alt="Uma Nova Esperança (1977)">
-            <img class="imagem" src="Src/Imagens/ep5.png" alt="O Império Contra-Ataca (1980)">
-            <img class="imagem" src="Src/Imagens/ep6.png" alt="O Retorno de Jedi (1983)">
-            <img class="imagem" src="Src/Imagens/ep7.png" alt="O Despertar da Força (2015)">
-            <img class="imagem" src="Src/Imagens/ep8.jpeg" alt="Os Últimos Jedi (2017)">
-            <img class="imagem" src="Src/Imagens/ep9.png" alt="A Ascensão Skywalker (2019)">
-        </div>
+    <a class="pular" href="#filmes">Pular para os filmes</a>
+    <audio id="musicaFundo" src="Src/Audio/marchaimperial.mp3" loop preload="none"></audio>
+    <div class="carrossel" aria-hidden="true">
+        <img class="imagem ativa" src="Src/Imagens/ep1.png" alt="" >
+        <img class="imagem" src="Src/Imagens/ep2.png" alt="" hidden>
+        <img class="imagem" src="Src/Imagens/ep3.png" alt="" hidden>
+        <img class="imagem" src="Src/Imagens/ep4.png" alt="" hidden>
+        <img class="imagem" src="Src/Imagens/ep5.png" alt="" hidden>
+        <img class="imagem" src="Src/Imagens/ep6.png" alt="" hidden>
+        <img class="imagem" src="Src/Imagens/ep7.png" alt="" hidden>
+        <img class="imagem" src="Src/Imagens/ep8.jpeg" alt="" hidden>
+        <img class="imagem" src="Src/Imagens/ep9.png" alt="" hidden>
+    </div>
+    <header class="header">
+        <a class="marca" href="#filmes"><span>STAR WARS</span><small>UNIVERSO SKYWALKER</small></a>
+        <button id="som" type="button" aria-pressed="false">Ativar música</button>
+    </header>
+    <main id="filmes">
         <div class="conteudo">
-            <div class="informacoes ativa">
-                <h1>A AMEAÇA FANTASMA (1999)</h1>
-                <p class="descricao">
-                  O Jedi Qui-Gon Jinn e seu aprendiz Obi-Wan Kenobi descobrem o jovem Anakin Skywalker, um escravo com grande potencial na Força, que vive em Tatooine. Enquanto isso, a Federação do Comércio trama contra a República, e uma batalha épica acontece em Naboo, com a revelação do misterioso Sith, Darth Maul.
-                </p>
+            <div class="saga-label"><span class="linha"></span> UMA GALÁXIA. NOVE EPISÓDIOS.</div>
+            <div class="painel" aria-live="polite" aria-atomic="true">
+                <article class="informacoes ativa" >
+                    <div class="metadados"><span>EPISÓDIO I</span><span>1999</span><span>Trilogia prequel</span></div>
+                    <h1>A Ameaça Fantasma</h1>
+                    <span class="sinopse-label">SINOPSE · CONTÉM SPOILERS</span>
+                    <p class="descricao">O Jedi Qui-Gon Jinn e seu aprendiz Obi-Wan Kenobi descobrem o jovem Anakin Skywalker, um escravo com grande potencial na Força, que vive em Tatooine. Enquanto isso, a Federação do Comércio trama contra a República, e uma batalha épica acontece em Naboo, com a revelação do misterioso Sith, Darth Maul.</p>
+                </article>
+                <article class="informacoes" hidden>
+                    <div class="metadados"><span>EPISÓDIO II</span><span>2002</span><span>Trilogia prequel</span></div>
+                    <h1>Ataque dos Clones</h1>
+                    <span class="sinopse-label">SINOPSE · CONTÉM SPOILERS</span>
+                    <p class="descricao">Anos após os eventos em Tatooine, Anakin, agora um Padawan Jedi, começa a desenvolver sentimentos por Padmé Amidala, levando-os a um romance proibido. Enquanto isso, a galáxia se divide em guerra, e os Jedi descobrem um exército secreto de clones criados para a República. O filme culmina na Batalha de Geonosis, marcando o início das Guerras Clônicas.</p>
+                </article>
+                <article class="informacoes" hidden>
+                    <div class="metadados"><span>EPISÓDIO III</span><span>2005</span><span>Trilogia prequel</span></div>
+                    <h1>A Vingança dos Sith</h1>
+                    <span class="sinopse-label">SINOPSE · CONTÉM SPOILERS</span>
+                    <p class="descricao">Anakin começa a ser consumido pela escuridão e se torna Darth Vader, traindo os Jedi e ajudando Palpatine a estabelecer o Império Galáctico. A Ordem 66 dizima os Jedi, enquanto Padmé dá à luz Luke e Leia. Obi-Wan derrota Anakin em Mustafar, e a galáxia entra em uma era de trevas.</p>
+                </article>
+                <article class="informacoes" hidden>
+                    <div class="metadados"><span>EPISÓDIO IV</span><span>1977</span><span>Trilogia original</span></div>
+                    <h1>Uma Nova Esperança</h1>
+                    <span class="sinopse-label">SINOPSE · CONTÉM SPOILERS</span>
+                    <p class="descricao">O jovem Luke Skywalker é arrastado para a rebelião contra o Império após encontrar os droides C-3PO e R2-D2. Ele se junta a Han Solo, Leia Organa e Obi-Wan Kenobi para destruir a superarma do Império, a Estrela da Morte. A jornada de Luke como Jedi começa, e ele destrói a Estrela da Morte, trazendo esperança à galáxia.</p>
+                </article>
+                <article class="informacoes" hidden>
+                    <div class="metadados"><span>EPISÓDIO V</span><span>1980</span><span>Trilogia original</span></div>
+                    <h1>O Império Contra-Ataca</h1>
+                    <span class="sinopse-label">SINOPSE · CONTÉM SPOILERS</span>
+                    <p class="descricao">A Rebelião sofre um golpe devastador quando o Império ataca a base secreta em Hoth. Luke busca treinamento Jedi com Mestre Yoda em Dagobah, enquanto Han e Leia fogem de Darth Vader. Em um confronto épico em Bespin, Vader revela ser o pai de Luke. No fim, Han Solo é capturado e fica a promessa de resgate por seus amigos.</p>
+                </article>
+                <article class="informacoes" hidden>
+                    <div class="metadados"><span>EPISÓDIO VI</span><span>1983</span><span>Trilogia original</span></div>
+                    <h1>O Retorno do Jedi</h1>
+                    <span class="sinopse-label">SINOPSE · CONTÉM SPOILERS</span>
+                    <p class="descricao">Luke resgata Han de Jabba the Hutt e, com seus amigos, lidera um ataque final contra o Império. Luke enfrenta Darth Vader e o Imperador, rejeitando o lado sombrio. A Rebelião destrói a segunda Estrela da Morte, e Anakin se redime ao salvar Luke e destruir o Imperador, restaurando a paz na galáxia.</p>
+                </article>
+                <article class="informacoes" hidden>
+                    <div class="metadados"><span>EPISÓDIO VII</span><span>2015</span><span>Trilogia sequel</span></div>
+                    <h1>O Despertar da Força</h1>
+                    <span class="sinopse-label">SINOPSE · CONTÉM SPOILERS</span>
+                    <p class="descricao">Trinta anos após a queda do Império, uma nova ameaça surge: a Primeira Ordem. A catadora Rey descobre seu poder na Força, enquanto busca Luke Skywalker, desaparecido. Kylo Ren, filho de Leia e Han, se torna o novo vilão. Os antigos heróis reaparecem e tudo isso marca o início de uma nova saga, com Rey assumindo seu lugar como a nova esperança Jedi.</p>
+                </article>
+                <article class="informacoes" hidden>
+                    <div class="metadados"><span>EPISÓDIO VIII</span><span>2017</span><span>Trilogia sequel</span></div>
+                    <h1>Os Últimos Jedi</h1>
+                    <span class="sinopse-label">SINOPSE · CONTÉM SPOILERS</span>
+                    <p class="descricao">Rey encontra Luke e busca treinamento, enquanto a Resistência luta contra a Primeira Ordem. Luke enfrenta seu passado e se sacrifica para salvar a Resistência, inspirando esperança em toda a galáxia. O conflito interno de Kylo Ren e a dualidade da Força é explorado, desafiando expectativas e redefinindo o destino dos personagens.</p>
+                </article>
+                <article class="informacoes" hidden>
+                    <div class="metadados"><span>EPISÓDIO IX</span><span>2019</span><span>Trilogia sequel</span></div>
+                    <h1>A Ascensão Skywalker</h1>
+                    <span class="sinopse-label">SINOPSE · CONTÉM SPOILERS</span>
+                    <p class="descricao">A batalha final entre a Resistência e a Primeira Ordem acontece, com Rey descobrindo ser neta do Imperador Palpatine. Ela luta para encontrar seu lugar na Força, enquanto Kylo Ren busca redenção. No fim, Palpatine é derrotado, e Rey adota o nome Skywalker, encerrando a saga com um novo equilíbrio na Força.</p>
+                </article>
             </div>
-            <div class="informacoes">
-                <h1>ATAQUE DOS CLONES (2002)</h1>
-                <p class="descricao">
-                  Anos após os eventos em Tatooine, Anakin, agora um Padawan Jedi, começa a desenvolver sentimentos por Padmé Amidala, levando-os a um romance proibido. Enquanto isso, a galáxia se divide em guerra, e os Jedi descobrem um exército secreto de clones criados para a República. O filme culmina na Batalha de Geonosis, marcando o início das Guerras Clônicas.
-                </p>
+            <div class="navegacao">
+                <button id="anterior" type="button" aria-label="Episódio anterior">←</button>
+                <span id="contador">01 <span>/ 09</span></span>
+                <button id="proximo" type="button" aria-label="Próximo episódio">→</button>
+                <span class="dica">Explore a saga</span>
             </div>
-            <div class="informacoes">
-                <h1>A VINGANÇA DOS SITH (2005)</h1>
-                <p class="descricao">
-                  Anakin começa a ser consumido pela escuridão e se torna Darth Vader, traindo os Jedi e ajudando Palpatine a estabelecer o Império Galáctico. A Ordem 66 dizima os Jedi, enquanto Padmé dá à luz Luke e Leia. Obi-Wan derrota Anakin em Mustafar, e a galáxia entra em uma era de trevas.
-                </p>
-            </div>
-            <div class="informacoes">
-                <h1>UMA NOVA ESPERANÇA (1977)</h1>
-                <p class="descricao">
-                  O jovem Luke Skywalker é arrastado para a rebelião contra o Império após encontrar os droides C-3PO e R2-D2. Ele se junta a Han Solo, Leia Organa e Obi-Wan Kenobi para destruir a superarma do Império, a Estrela da Morte. A jornada de Luke como Jedi começa, e ele destrói a Estrela da Morte, trazendo esperança à galáxia.
-                </p>
-            </div>
-            <div class="informacoes">
-                <h1>O IMPÉRIO CONTRA-ATACA (1980)</h1>
-                <p class="descricao">
-                  A Rebelião sofre um golpe devastador quando o Império ataca a base secreta em Hoth. Luke busca treinamento Jedi com Mestre Yoda em Dagobah, enquanto Han e Leia fogem de Darth Vader. Em um confronto épico em Bespin, Vader revela ser o pai de Luke. No fim Han Solo e capturado e a fica a promessa de resgate por seus amigos.
-                </p>
-            </div>
-            <div class="informacoes">
-                <h1>O RETORNO DO JEDI (1983)</h1>
-                <p class="descricao">
-                  Luke resgata Han de Jabba the Hutt e, com seus amigos, lidera um ataque final contra o Império. Luke enfrenta Darth Vader e o Imperador, rejeitando o lado sombrio. A Rebelião destrói a segunda Estrela da Morte, e Anakin se redime ao salvar Luke e destruir o Imperador, restaurando a paz na galáxia.
-                </p>
-            </div>
-            <div class="informacoes">
-                <h1>O DESPERTAR DA FORÇA (2015)</h1>
-                <p class="descricao">
-                  Trinta anos após a queda do Império, uma nova ameaça surge: a Primeira Ordem. A catadora Rey descobre seu poder na Força, enquanto busca Luke Skywalker, desaparecido. Kylo Ren, filho de Leia e Han, se torna o novo vilão. Os antigos heróis reaparecem e tudo isso marca o início de uma nova saga, com Rey assumindo seu lugar como a nova esperança Jedi.
-                </p>
-            </div>
-            <div class="informacoes">
-              <h1>OS ÚLTIMOS JEDI (2017)</h1>
-              <p class="descricao">
-                Rey encontra Luke e busca treinamento, enquanto a Resistência luta contra a Primeira Ordem. Luke enfrenta seu passado e se sacrifica para salvar a Resistência, inspirando esperança em toda a galáxia. O conflito interno de Kylo Ren e a dualidade da Força é explorado, desafiando expectativas e redefinindo o destino dos personagens.
-              </p>
-            </div>
-            <div class="informacoes">
-                <h1>A ASCENSÃO SKYWALKER (2019)</h1>
-                <p class="descricao">
-                  A batalha final entre a Resistência e a Primeira Ordem acontece, com Rey descobrindo ser neta do Imperador Palpatine. Ela luta para encontrar seu lugar na Força, enquanto Kylo Ren busca redenção. No fim, Palpatine é derrotado, e Rey adota o nome Skywalker, encerrando a saga com um novo equilíbrio na Força.
-                </p>
-            </div>
-        <div class="botoes-carrossel">
-            <button class="botao selecionado"></button>
-            <button class="botao"></button>
-            <button class="botao"></button>
-            <button class="botao"></button>
-            <button class="botao"></button>
-            <button class="botao"></button>
-            <button class="botao"></button>
-            <button class="botao"></button>
-            <button class="botao"></button>
         </div>
+        <nav class="seletor" aria-label="Escolher episódio">
+            <div class="seletor-titulo"><span>A SAGA SKYWALKER</span><small>Na ordem dos episódios</small></div>
+            <div class="botoes-carrossel">
+                <button type="button" class="botao selecionado" aria-pressed="true" aria-label="Episódio I: A Ameaça Fantasma" title="A Ameaça Fantasma"><span class="rebelde" aria-hidden="true"></span><span>I</span></button>
+                <button type="button" class="botao" aria-pressed="false" aria-label="Episódio II: Ataque dos Clones" title="Ataque dos Clones"><span class="rebelde" aria-hidden="true"></span><span>II</span></button>
+                <button type="button" class="botao" aria-pressed="false" aria-label="Episódio III: A Vingança dos Sith" title="A Vingança dos Sith"><span class="rebelde" aria-hidden="true"></span><span>III</span></button>
+                <button type="button" class="botao" aria-pressed="false" aria-label="Episódio IV: Uma Nova Esperança" title="Uma Nova Esperança"><span class="rebelde" aria-hidden="true"></span><span>IV</span></button>
+                <button type="button" class="botao" aria-pressed="false" aria-label="Episódio V: O Império Contra-Ataca" title="O Império Contra-Ataca"><span class="rebelde" aria-hidden="true"></span><span>V</span></button>
+                <button type="button" class="botao" aria-pressed="false" aria-label="Episódio VI: O Retorno do Jedi" title="O Retorno do Jedi"><span class="rebelde" aria-hidden="true"></span><span>VI</span></button>
+                <button type="button" class="botao" aria-pressed="false" aria-label="Episódio VII: O Despertar da Força" title="O Despertar da Força"><span class="rebelde" aria-hidden="true"></span><span>VII</span></button>
+                <button type="button" class="botao" aria-pressed="false" aria-label="Episódio VIII: Os Últimos Jedi" title="Os Últimos Jedi"><span class="rebelde" aria-hidden="true"></span><span>VIII</span></button>
+                <button type="button" class="botao" aria-pressed="false" aria-label="Episódio IX: A Ascensão Skywalker" title="A Ascensão Skywalker"><span class="rebelde" aria-hidden="true"></span><span>IX</span></button>
+            </div>
+        </nav>
+        <p id="status-som" role="status"></p>
+        <footer>Projeto de fã · Desenvolvido por Beatriz Duarte</footer>
     </main>
     <script src="Src/Js/index.js"></script>
 </body>
-
 </html>
