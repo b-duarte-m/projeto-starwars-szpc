@@ -258,3 +258,21 @@ footer {
 .painel {
     position: relative;
 }
+.painel {
+    display: grid;
+    align-items: start;
+}
+
+.painel > .informacoes,
+.painel > .informacoes[hidden] {
+    display: block !important;
+    grid-area: 1 / 1;
+    visibility: hidden;
+    pointer-events: none;
+    animation: none;
+}
+
+.painel > .informacoes.ativa {
+    visibility: visible;
+    pointer-events: auto;
+}
