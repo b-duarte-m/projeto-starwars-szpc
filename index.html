@@ -8,13 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./Src/Css/reset.css?v=3">
-    <link rel="stylesheet" href="./Src/Css/estilo.css?v=3">
-    <link rel="stylesheet" href="./Src/Css/responsivo.css?v=3">
+    <link rel="stylesheet" href="Src/Css/reset.css?v=5">
+    <link rel="stylesheet" href="Src/Css/estilo.css?v=5">
+    <link rel="stylesheet" href="Src/Css/responsivo.css?v=5">
 </head>
 <body>
     <a class="pular" href="#filmes">Pular para os filmes</a>
-    <audio id="musicaFundo" src="Src/Audio/marchaimperial.mp3" loop preload="none"></audio>
     <div class="carrossel" aria-hidden="true">
         <img class="imagem ativa" src="Src/Imagens/ep1.png" alt="" >
         <img class="imagem" src="Src/Imagens/ep2.png" alt="" hidden>
@@ -28,7 +27,6 @@
     </div>
     <header class="header">
         <a class="marca" href="#filmes"><span>STAR WARS</span><small>UNIVERSO SKYWALKER</small></a>
-        <button id="som" type="button" aria-pressed="false">Ativar música</button>
     </header>
     <main id="filmes">
         <div class="conteudo">
@@ -110,9 +108,28 @@
                 <button type="button" class="botao" aria-pressed="false" aria-label="Episódio IX: A Ascensão Skywalker" title="A Ascensão Skywalker"><span class="rebelde" aria-hidden="true"></span><span>IX</span></button>
             </div>
         </nav>
-        <p id="status-som" role="status"></p>
         <footer>Projeto de fã · Desenvolvido por Beatriz Duarte</footer>
     </main>
-    <script src="Src/Js/index.js"></script>
+    <script src="Src/Js/index.js?v=5"></script>
 </body>
 </html>
+
+
+============================================================
+Src/Css/reset.css
+============================================================
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+button {
+    font: inherit;
+}
+[hidden] {
+    display: none !important;
+}
