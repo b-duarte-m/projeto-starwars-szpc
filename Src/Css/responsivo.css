@@ -1,45 +1,82 @@
-@media (max-width: 768px) {
-  .informacoes.ativa {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .informacoes .descricao {
-      width: 60%;
-      text-align: center;
-  }
+@media (max-width: 900px) {
+    .painel {
+        max-width: 600px;
+    }
+    .botoes-carrossel {
+        gap: 6px;
+    }
+    .botao {
+        flex-direction: column;
+        gap: 5px;
+        min-height: 65px;
+    }
+    .carrossel::after {
+        background: linear-gradient(90deg, #090b10e8, #090b1080), linear-gradient(0deg, #090b10 0%, transparent 80%);
+    }
 }
-
-@media (max-width: 425px) {
-  body {
-      padding: 40px;
-  }
-
-  .informacoes .descricao {
-      width: 100%;
-  }
-
-  .conteudo {
-      min-height: 70vh;
-      gap: 50px;
-  }
-
-  .botoes-carrossel {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-  }
-
-  button {
-      width: 20%;
-      max-width: 60px;
-      font-size: 12px;
-      padding: 8px;
-      border-radius: 50%;
-      box-sizing: border-box;
-      text-align: center;
-  }
+@media (max-width: 600px) {
+    .header {
+        padding: 20px;
+    }
+    .marca > span {
+        font-size: 18px;
+    }
+    .marca small {
+        font-size: 7px;
+        letter-spacing: 2px;
+    }
+    #som {
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+    main {
+        padding: 0 20px 20px;
+    }
+    .conteudo {
+        min-height: auto;
+        padding-top: 30px;
+    }
+    .saga-label {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+    h1 {
+        font-size: clamp(25px, 7vw, 38px);
+        letter-spacing: .5px;
+    }
+    .descricao {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+    .imagem {
+        object-position: 60% center;
+    }
+    .carrossel::after {
+        background: linear-gradient(0deg, #090b10 0%, #090b10d9 50%, #090b1070 100%);
+    }
+    .seletor {
+        padding: 16px;
+    }
+    .seletor-titulo {
+        flex-direction: column;
+        gap: 4px;
+    }
+    .botoes-carrossel {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+    .botao {
+        flex-direction: row;
+        min-height: 48px;
+        gap: 10px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
 }
